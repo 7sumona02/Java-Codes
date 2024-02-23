@@ -1,0 +1,18 @@
+import java.util.*;
+
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int sum = 0;
+        
+        while(true){
+            String text = scanner.nextLine();
+            if(text.equals("")){
+                break;
+            }
+            String[] pieces = text.split(",");
+            sum = sum + Integer.valueOf(pieces[1]);
+        }
+        System.out.println("Sum of ages is "+sum);
+    }
+}
