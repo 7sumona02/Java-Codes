@@ -1,0 +1,33 @@
+import java.util.*;
+
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int sum = 0;
+        int count = 0;
+        String longestName = "";
+
+        // String pieces = text.split(",");
+        while(true){
+            String text = scanner.nextLine();
+            if(text.equals("")){
+                break;
+            }
+            String[] pieces = text.split(",");
+            String name = pieces[0];
+            int age = Integer.valueOf(pieces[1]);
+            
+            if(name.length()>longestName.length()){
+                longestName = name;
+            }
+            sum +=age;
+            count +=1;
+        }
+        System.out.println("longest name: "+longestName);
+        if (count > 0) {
+            System.out.println("Age average: " + (1.0 * sum / count));
+        } else {
+            System.out.println("No input.");
+        }
+    }
+}
