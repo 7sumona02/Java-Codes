@@ -1,0 +1,23 @@
+import java.util.*;
+
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int sum = 0;
+        int count = 0;
+        
+        while(true){
+            String text = scanner.nextLine();
+            if(text.equals("")){
+                break;
+            }
+            String[] pieces = text.split(",");
+            sum = sum + Integer.valueOf(pieces[1]);
+        }
+        if(count>0){
+            System.out.println("Average of ages is "+(1.0*sum/count));
+        }else{
+            System.out.println("no input");
+        }
+    }
+}
